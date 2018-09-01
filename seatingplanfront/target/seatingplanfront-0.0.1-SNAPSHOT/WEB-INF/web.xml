@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+    <display-name>seatingPlanFront</display-name>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/includes/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+
+
+    <filter>
+        <filter-name>RestrictionFilter</filter-name>
+        <filter-class>com.cesi.seatingplan.seatingplanfront.filter.RestrictionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RestrictionFilter</filter-name>
+        <url-pattern>/edit/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RestrictionFilter</filter-name>
+        <url-pattern>/add/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.ConnexionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EmplacementServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.EmplacementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmplacementServlet</servlet-name>
+        <url-pattern>/view/emplacement</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmplacementServlet</servlet-name>
+        <url-pattern>/add/emplacement</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmplacementServlet</servlet-name>
+        <url-pattern>/edit/emplacement</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmplacementServlet</servlet-name>
+        <url-pattern>/delete/emplacement</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PlanServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.PlanServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlanServlet</servlet-name>
+        <url-pattern>/view/plan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlanServlet</servlet-name>
+        <url-pattern>/edit/plan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlanServlet</servlet-name>
+        <url-pattern>/add/plan</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MaterielServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.MaterielServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaterielServlet</servlet-name>
+        <url-pattern>/add/materiels</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonneServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.PersonneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonneServlet</servlet-name>
+        <url-pattern>/add/personne</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.cesi.seatingplan.seatingplanfront.servlet.MainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/views/error/404.html</location>
+    </error-page>
+
+    <error-page>
+        <error-code>405</error-code>
+        <location>/views/error/404.html</location>
+    </error-page>
+</web-app>

@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin-top: 50px;
+    min-height: 70vh;
+    border: 2px solid #797979;
+    border-radius: 5px;
+    position: relative;
+}
+
+a:hover {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+
+/* ---------------------- CONTAINER HEADER ---------------------- */
+#header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+    text-align: right;
+    clear: both;
+}
+
+#body {
+	background-image: url("../img/background.jpg"); 
+}
+
+#header h2 {
+    float: left;
+    margin-top: -2px;
+}
+
+#header button {
+    margin-bottom: 10px !important;
+}
+
+/* ---------------------- VISUALISATION PLAN ---------------------- */
+#imgplan img {
+    width: 100%;
+}
+
+#panelOutils {
+    margin-top: 50px;
+}
+
+#panelOutils li {
+    cursor: pointer;
+}
+
+.input-group, .form-control {
+    margin-bottom: 5px;
+}
+
+.badgeCliquable {
+    cursor: pointer;
+    padding: 5px 15px !important;
+}
+
+.pull-right {
+    margin-right: 5px;
+    padding: 9px 12px !important;
+}
+
+@media (min-width: 768px) {
+    .dl-horizontal dd {
+        margin-left: 120px !important;
+    }
+    .dl-horizontal dt {
+        width: 100px !important;
+    }
+}

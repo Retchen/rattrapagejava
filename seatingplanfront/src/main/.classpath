@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java EE 6-Java EE 6"/>
+	<classpathentry kind="var" path="APPLICATION_HOME_DIR/lib/junit.jar"/>
+	<classpathentry kind="output" path="E:/ELIOTT/PROFESSIONNEL/pfr_maf-seating-plan-695fff795987/out/production/main"/>
+</classpath>
