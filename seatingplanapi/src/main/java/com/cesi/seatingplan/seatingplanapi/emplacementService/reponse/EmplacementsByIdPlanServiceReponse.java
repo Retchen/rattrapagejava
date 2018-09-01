@@ -9,7 +9,6 @@ public class EmplacementsByIdPlanServiceReponse extends AbstractReponse{
 
 	private List<EmplacementDecorateur> emplacement;
 	
-	//TODO FSU : Sortir le plan des élements et le bind ici
 	private Plan plan;
 
 	public List<EmplacementDecorateur> getEmplacement() {

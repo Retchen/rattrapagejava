@@ -57,7 +57,7 @@ public class EmplacementControlleur{
 
 		reponse.setEmplacement(mapperEmplacementDecorateur(result));
 
-		//TODO FSU : c'est pas dutout opti
+
 		for (EmplacementDecorateur emplacement : reponse.getEmplacement()) {
 			int nbPersonne = repositoryPersonne.countUtilisateurByEmplacement(emplacement.getId());
 			emplacement.setOccupe((nbPersonne > 0 ) ? true : false);
@@ -67,7 +67,7 @@ public class EmplacementControlleur{
 		
 		reponse.setStatut(true);
 
-		// vérification si la liste retournée est supérieur à 0
+		// vérification si la liste retournée est supérieure à 0
 		reponse.setMessage((result.size() > 0) ? EmplacementConstantes.NO_ERROR_CODE : EmplacementConstantes.ERREUR_AUCUN_EMPLACEMENT + idPlan);
 
 		LoggerHelper.loggerParamSortie(EmplacementConstantes.PATH_SERVICE_GETALL, reponse.toString());
@@ -78,7 +78,7 @@ public class EmplacementControlleur{
 
 	
 	/**
-	 * Permet de récupérer un emplacement, la personne associer et le matériel grace à son emplacement id
+	 * Permet de récupérer un emplacement, la personne associée et le matériel grâce à son emplacement id
 	 * @return EmplacementDetailByIdEmplacementReponse
 	 */
 	@GetMapping(EmplacementConstantes.PATH_SERVICE_FINDBYIDEMPLACEMENT)
@@ -114,9 +114,6 @@ public class EmplacementControlleur{
 		}
 		
 		message += ((personnes.size() > 0) ? EmplacementConstantes.STRING_VIDE : EmplacementConstantes.ERREUR_AUCUNE_PERSONNE);
-
-		//TODO FSU : Gerer le cas ou plusieur message soit retourné
-		//message = (EmplacementConstantes.STRING_VIDE.equals(message)) ? EmplacementConstantes.NO_ERROR_CODE : "toto";
 
 		reponse.setStatut(true);
 		LoggerHelper.loggerParamSortie(EmplacementConstantes.PATH_SERVICE_FINDBYIDEMPLACEMENT, reponse.toString());

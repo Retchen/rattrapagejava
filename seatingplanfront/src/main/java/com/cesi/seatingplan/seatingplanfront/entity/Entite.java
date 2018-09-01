@@ -3,15 +3,13 @@ package com.cesi.seatingplan.seatingplanfront.entity;
 public class Entite {
     private int id;
     private String nom;
-    private int nb_place;
     private double largeur;
     private double longueur;
 
 
-    public Entite(int id, String nom, int nb_place, double longueur, double largeur) {
+    public Entite(int id, String nom, double longueur, double largeur) {
         this.id = id;
         this.nom = nom;
-        this.nb_place = nb_place;
         this.largeur = largeur;
         this.longueur = longueur;
     }
@@ -39,15 +37,6 @@ public class Entite {
         return this;
     }
 
-    public int getNb_place() {
-        return nb_place;
-    }
-
-    public Entite setNb_place(int nb_place) {
-        this.nb_place = nb_place;
-        return this;
-    }
-
     public double getLargeur() {
         return largeur;
     }
@@ -71,7 +60,6 @@ public class Entite {
         return "Entite{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
-                ", nb_place=" + nb_place +
                 ", largeur=" + largeur +
                 ", longueur=" + longueur +
                 '}';

@@ -44,7 +44,6 @@ public class EntiteHelper {
                     JSONObject obj = array.getJSONObject(i);
                     entites.add(new Entite(obj.getInt("id"),
                             obj.getString("nom"),
-                            obj.getInt("nbPlace"),
                             obj.getInt("largeur"),
                             obj.getInt("longueur")));
                 }

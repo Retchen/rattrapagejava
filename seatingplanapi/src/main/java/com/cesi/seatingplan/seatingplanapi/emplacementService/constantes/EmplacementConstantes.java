@@ -12,11 +12,7 @@ public interface EmplacementConstantes extends CommunConstantes{
 
 	public static final String PATH_SERVICE_FINDBYIDEMPLACEMENT = "detail/{idEmplacement}";
 
-	public static final String ERREUR_AUCUNE_PERSONNE = "Aucune personne n'a été trouvé à cet emplacement";
-	
-	public static final String ERREUR_AUCUNE_MATERIEL = "Aucun materiel n'a été trouvé à cet emplacement";
-	
-	public static final String ERREUR_NAMEMATERIEL_DEJAPRESENT= "Un matériel saisie est deja present";	
+	public static final String ERREUR_AUCUNE_PERSONNE = "Aucune personne n'a été trouvé à cet emplacement";	
 
 	public static final String PATH_SERVICE_ADDEMPLACEMENTPERSONNE = "/addPersonnes";
 

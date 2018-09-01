@@ -14,9 +14,6 @@ public class Entite {
 
 	private String nom;
 	
-	@Column(name="nb_place")
-	private int nbPlace;
-	
 	private Double largeur;
 	
 	private Double longueur;
@@ -38,14 +35,6 @@ public class Entite {
 		this.nom = nom;
 	}
 
-	public int getNbPlace() {
-		return nbPlace;
-	}
-
-	public void setNbPlace(int nbPlace) {
-		this.nbPlace = nbPlace;
-	}
-
 	public Double getLargeur() {
 		return largeur;
 	}
@@ -64,7 +53,8 @@ public class Entite {
 	
 	@Override
 	public String toString() {
-		return "Entite [id=" + id + ", nom=" + nom + ", nbPlace=" + nbPlace + ", largeur=" + largeur + ", longueur="
+		return "Entite [id=" + id + ", nom=" + nom + 
+				", largeur=" + largeur + ", longueur="
 				+ longueur + "]";
 	}
 

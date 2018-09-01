@@ -111,7 +111,6 @@ public class PlanHelper {
                             obj.getString("orientation"),
                             new Entite(obj.getJSONObject("entite").getInt("id"),
                                     obj.getJSONObject("entite").getString("nom"),
-                                    obj.getJSONObject("entite").getInt("nbPlace"),
                                     obj.getJSONObject("entite").getInt("largeur"),
                                     obj.getJSONObject("entite").getInt("longueur")),
                             obj.getBoolean("occupe"));

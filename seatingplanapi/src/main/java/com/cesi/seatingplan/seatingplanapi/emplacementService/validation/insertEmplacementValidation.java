@@ -14,9 +14,7 @@ public class insertEmplacementValidation extends AbstractValidation {
 	public static void validate (InsertEmplacementParametre param) throws EmplacementException{
 		
 		
-		// ==========================================================
-		// ============== Validation de l'emplacement ===============
-		// ==========================================================
+		//Validation de l'emplacement 
 		 
 		Emplacement e = param.getEmplacement();
 		
@@ -40,9 +38,7 @@ public class insertEmplacementValidation extends AbstractValidation {
 			throw new EmplacementException(EmplacementConstantes.MISSING_PARAM);
 		}
 		
-		// ==========================================================
-		// ============== Validation des personnes 	  ===============
-		// ==========================================================
+		// Validation des personnes 	 
 		 
 		List<Personne> ps = param.getPersonnes();
 		

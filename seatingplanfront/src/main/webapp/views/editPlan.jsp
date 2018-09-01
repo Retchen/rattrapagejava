@@ -27,9 +27,9 @@
     </div>
     <div class="col-md-2">
         <ul class="list-group" id="panelOutils">
-            <c:forEach items="${entites}" var="ent">
-                <li class="list-group-item" id="<c:out value="${ent.id}"/>"><c:out value="${ent.nom}" /> - <c:out value="${ent.nb_place}" /> place(s)</li>
-            </c:forEach>
+           <c:forEach items="${entites}" var="ent">
+                <li class="list-group-item" id="<c:out value="${ent.id}"/>"><c:out value="${ent.nom}" /></li>
+            </c:forEach> 
         </ul>
     </div>
 
@@ -71,7 +71,7 @@
                     </div>
                     <div class="form-group">
                         <label>Occupant</label>
-                        <select class="form-control choicePersonnes" name="personnes[]" onchange="addSelectPersonnes(this)">
+                        <select class="form-control choicePersonnes" name="personnes[]">
                             <option value=""></option>
                             <c:forEach items="${personnes}" var="pers" >
                                 <option value="<c:out value="${pers.id}" />"><c:out value="${pers.nom}" /> <c:out value="${pers.prenom}" /></option>

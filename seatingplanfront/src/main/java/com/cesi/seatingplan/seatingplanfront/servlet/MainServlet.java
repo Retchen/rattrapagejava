@@ -16,8 +16,6 @@ public class MainServlet extends HttpServlet {
         List<Plan> plans = planHelper.getAll();
 
         
-        response.sendRedirect(request.getContextPath() + "/view//plan?id=1");
-//        request.setAttribute("plans", plans);
-//        this.getServletContext().getRequestDispatcher("/views/index.jsp").forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/view/plan?id=1");
     }
 }

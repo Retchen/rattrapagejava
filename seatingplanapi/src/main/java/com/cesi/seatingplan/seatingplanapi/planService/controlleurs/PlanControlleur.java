@@ -112,11 +112,7 @@ public class PlanControlleur {
 		
 		DeletePlanReponse reponse = new DeletePlanReponse();
 		
-		//try {
-			
-			//DeletePlanValidation.validate(param);
-			
-			// on enlève l'id materiel au personne concerné 
+
 			List<Emplacement> emplacement = repositoryEmplacement.findByPlan_id(param.getPlan().getId());
 			
 			EmplacementControlleur emplacementControlleur = new EmplacementControlleur();
@@ -135,14 +131,6 @@ public class PlanControlleur {
 			
 			reponse.setStatut(true);
 			reponse.setMessage(EmplacementConstantes.NO_ERROR_CODE);
-		
-			
-//		} 
-//		catch (EmplacementException e) {
-//			reponse.setStatut(false);
-//			reponse.setMessage(e.toString());
-//		}
-//		
 		return reponse;
 	}
 	

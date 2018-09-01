@@ -10,7 +10,6 @@ import com.cesi.seatingplan.seatingplanapi.commun.entity.Personne;
 
 public interface PersonneRepository extends PagingAndSortingRepository<Personne, Integer>{
 
-	//FIXME FSU : Ajouter le WHERE IN DATE 
 	//public Integer countByEmplacement_id(Integer idEmplacement);
 	
 	/**
@@ -40,8 +39,5 @@ public interface PersonneRepository extends PagingAndSortingRepository<Personne,
 	public List<Personne> findPersonneByEmplacement_id(Integer idEmplacement);
 	
 	public Personne findById(Integer id);
-	
-	//@Query("UPDATE personne pe SET pe.emplacement.id = ? WHERE pe.id = ?")
-	//public void saveNewEmplacement(Integer idEmplacement, Integer idPersonne );
 	
 }
